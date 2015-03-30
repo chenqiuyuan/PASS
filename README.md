@@ -7,5 +7,5 @@ ls
 echo "123">TEST  新建文件夹，仅做测试 可以忽略 
 ls
 git add -A  强制上传全部文件
-git commit -m "test". 评论  注意  末尾的  .
+git commit -m "test". 评论  注意  末尾的  . mac应该需要加上. windows下不用
 git push 推送

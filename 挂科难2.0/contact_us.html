@@ -12,12 +12,6 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
-            <!--&lt;!&ndash;<span class="sr-only">Toggle navigation</span>&ndash;&gt;-->
-            <!--&lt;!&ndash;<span class="icon-bar">hehehehe</span>&ndash;&gt;-->
-            <!--&lt;!&ndash;<span class="icon-bar"></span>&ndash;&gt;-->
-            <!--&lt;!&ndash;<span class="icon-bar"></span>&ndash;&gt;-->
-            <!--</button>-->
             <a class="navbar-brand" href="index.html" style="font-size: 25px">挂科难</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -28,45 +22,41 @@
                 <li><a href="http://open.163.com/">网易公开课</a></li>
                 <li><a href="http://www.learn.kaikeba.com/">开课吧</a></li>
                 <li><a href="http://www.syslab.us">Syslab</a></li>
-                <!--<li class="dropdown">-->
-                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">其他链接1 <span class="caret"></span></a>-->
-                <!--<ul class="dropdown-menu" role="menu">-->
-                <!--<li><a href="#">Action</a></li>-->
-                <!--<li><a href="#">Another action</a></li>-->
-                <!--<li><a href="#">Something else here</a></li>-->
-                <!--<li class="divider"></li>-->
-                <!--<li><a href="#">Separated link</a></li>-->
-                <!--<li class="divider"></li>-->
-                <!--<li><a href="#">One more separated link</a></li>-->
-                <!--</ul>-->
-                <!--</li>-->
             </ul>
             <form class="navbar-form navbar-right" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="输入搜索内容">
                 </div>
-                <!--<div class="form-group">-->
-                <!--<input type="text" class="form-control" placeholder="Password">-->
-                <!--</div>-->
                 <button type="submit" class="btn btn-success">搜索</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="login.html">
-                    <button type="button" class="btn btn-success">登录 / 注册</button>
-                </a>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                    登录/注册
+                </button>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container" align="center" style="width: 300px">
+                                    <h3>登录挂科难</h3>
+                                    <h5>如果还没有账号请<a href="register.html">点击注册</a></h5>
+                                    <div class="input-group input-group-lg">
+                                        <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+                                        <!--<input type="email" class="form-control" placeholder="E-mail" aria-describedby="sizing-addon1">-->
+                                        <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
+                                        <p><a class="btn btn-success btn-lg" role="button" style="width: 300px">提交</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </form>
-            <!--<ul class="nav navbar-nav navbar-right">-->
-            <!--<li><a href="#">链接3</a></li>-->
-            <!--<li class="dropdown">-->
-            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">其他链接2 <span class="caret"></span></a>-->
-            <!--<ul class="dropdown-menu" role="menu">-->
-            <!--<li><a href="#">Action</a></li>-->
-            <!--<li><a href="#">Another action</a></li>-->
-            <!--<li><a href="#">Something else here</a></li>-->
-            <!--<li class="divider"></li>-->
-            <!--<li><a href="#">Separated link</a></li>-->
-            <!--</ul>-->
-            <!--</li>-->
-            <!--</ul>-->
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
@@ -74,16 +64,14 @@
     <div class="container">
         <h1>上挂科难，轻松当学霸！</h1>
         <p><img src="images/11012178_1332496725210_1024x1024.gif"><img src="images/screen.png"></p>
-
-        <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
     </div>
     </div>
     <div class="container">
         <textarea rows="10px" cols="160px"></textarea>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">吐槽完了</a></p>
     </div>
-
-<div class="container">
+<br/><br/><br/>
+<div class="container"  style="height: 10px">
     <p class="navbar-text">Copyright &copy; 2015 Syslab 科大基友共和国 All Rights Reversed.</p>
     <p class="navbar-text">详情请点击：<a href="http://www.syslab.us">http://www.syslab.us</a></p>
     <p class="navbar-text">有建议请点击：<a href="contact_us.html">吐槽一下</a></p>

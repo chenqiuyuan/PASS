@@ -3,21 +3,18 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>登录挂科难</title>
-    <script src="references/jquery-1.11.2.min.js"></script>
-    <script src="references/bootstrap.min.js"></script>
-    <link href="references/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="references/jquery-1.11.2.min.js"></script>  <!-- 调用的几个现成的库-->
+    <script src="references/app.js"></script>
+    <link href="references/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="index.html" style="font-size: 25px">挂科难</a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <!--<li class="active"><a href="http://www.uestc.edu.cn">电子科技大学 <span class="sr-only">(current)</span></a></li>-->
                 <li><a href="http://www.uestc.edu.cn">电子科技大学</a></li>
                 <li><a href="http://open.163.com/">网易公开课</a></li>
                 <li><a href="http://www.learn.kaikeba.com/">开课吧</a></li>
@@ -29,10 +26,10 @@
                 </div>
                 <button type="submit" class="btn btn-success">搜索</button>
             </form>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        </div>
+    </div>
 </nav>
-<div class="jumbotron" style="background-image:url('images/main_back.jpg');height: 430px;width: 100%" >
+<div class="jumbotron" style="background-image:url('images/main_back.jpg');height: 430px;width: 100%" >   <!-- 巨幕 突出主题 挂科难 -->
     <div class="content" style="text-align: center">
         <h1 style="color: #ffffff">挂科难，轻松当学霸！</h1>
         <p style="color: #ffffff">科大基友自己的考试库，带你装X带你飞，每个人都能轻松当学霸！</p>
@@ -42,18 +39,15 @@
 </div>
 <div class="container" align="center" style="width: 300px">
     <h3>登录</h3>
-    <h5>如果还没有账号请<a href="register.html">点击注册</a></h5>
-    <div class="input-group input-group-lg">
-        <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
-        <!--<input type="email" class="form-control" placeholder="E-mail" aria-describedby="sizing-addon1">-->
-        <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
-        <p><a class="btn btn-success btn-lg" role="button" style="width: 300px">提交</a></p>
-    </div>
+    <h5>如果还没有账号请<a href="register.html">点击注册</a></h5>    <!-- 登录界面部分-->
+    <form class="input-group input-group-lg" method="post" action="#">
+        <input type="email" class="form-control" placeholder="Email" name="email" required>
+        <input type="password" class="form-control" placeholder="Password" name="email" required>
+       <button type="submit" class="btn btn-success btn-lg" style="width: 300px">确认提交</button>
+    </form>
 </div>
-
-
 <br/><br/><br/>
-<div class="container" style="height: 10px">
+<div class="container" style="height: 10px">  <!-- 页脚导航-->
     <p class="navbar-text">Copyright &copy; 2015 Syslab 科大基友共和国 All Rights Reversed.</p>
     <p class="navbar-text">详情请点击：<a href="http://www.syslab.us">http://www.syslab.us</a></p>
     <p class="navbar-text">有建议请点击：<a href="contact_us.html">吐槽一下</a></p>

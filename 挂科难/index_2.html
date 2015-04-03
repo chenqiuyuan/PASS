@@ -3,22 +3,19 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>挂科难，轻松当学霸</title>
-    <script src="references/jquery-1.11.2.min.js"></script>
-    <script src="references/bootstrap.min.js"></script>
-    <link href="references/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="references/jquery-1.11.2.min.js"></script> <!-- 调用的几个现成的库-->
+    <script src="references/app.js"></script>
+    <link href="references/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
- <nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top"><!-- 导航条设置-->
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="index.html" style="font-size: 25px">挂科难</a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <!--<li class="active"><a href="http://www.uestc.edu.cn">电子科技大学 <span class="sr-only">(current)</span></a></li>-->
+            <ul class="nav navbar-nav"><!-- 友情跳转链接-->
                 <li><a href="http://www.uestc.edu.cn">电子科技大学</a></li>
                 <li><a href="http://open.163.com/">网易公开课</a></li>
                 <li><a href="http://www.learn.kaikeba.com/">开课吧</a></li>
@@ -31,7 +28,7 @@
                 <button type="submit" class="btn btn-success">搜索</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-                    登录/注册
+                    登录/注册 <!-- 跳转到模态框进行登录-->
                 </button>
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -39,16 +36,15 @@
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body"> <!-- 此部分模态框的内容是登录界面的内容-->
                                 <div class="container" align="center" style="width: 300px">
                                     <h3>登录挂科难</h3>
                                     <h5>如果还没有账号请<a href="register.html">点击注册</a></h5>
-                                    <div class="input-group input-group-lg">
-                                        <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
-                                        <!--<input type="email" class="form-control" placeholder="E-mail" aria-describedby="sizing-addon1">-->
-                                        <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
-                                        <p><a class="btn btn-success btn-lg" role="button" style="width: 300px">提交</a></p>
-                                    </div>
+                                    <form class="input-group input-group-lg" method="post" action="#">
+                                        <input type="email" class="form-control" placeholder="Email" name="email" style="width: 300px" required>
+                                        <input type="password" class="form-control" placeholder="Password" name="email" style="width: 300px" required>
+                                        <button type="submit" class="btn btn-info btn-lg" style="width: 300px">确认登录</button>
+                                    </form>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -58,10 +54,10 @@
                     </div>
                 </div>
             </form>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
- </nav>
- <div class="jumbotron" style="background-image:url('images/main_back.jpg');height: 430px;width: 100%" >
+        </div>
+    </div>
+</nav>
+ <div class="jumbotron" style="background-image:url('images/main_back.jpg');height: 430px;width: 100%" >   <!-- 巨幕 突出主题 挂科难 -->
      <div class="content" style="text-align: center">
          <h1 style="color: #ffffff">挂科难，轻松当学霸！</h1>
          <p style="color: #ffffff">科大基友自己的考试库，带你装X带你飞，每个人都能轻松当学霸！</p>
@@ -70,7 +66,7 @@
      </div>
  </div>
  <div class="container">
-     <ul class="nav nav-tabs">
+     <ul class="nav nav-tabs">     <!-- 筛选导航条-->
          <li role="presentation"><a href="#">所有科目</a></li>
          <li role="presentation"><a href="#">核心通识课</a></li>
          <li role="presentation"><a href="#">专业选修课</a></li>
@@ -80,7 +76,7 @@
              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
                  选择学院 <span class="caret"></span>
              </a>
-             <ul class="dropdown-menu" role="menu">
+             <ul class="dropdown-menu" role="menu">   <!-- 学院选择 可根据学院选择课程-->
                  <li><a href="#">信息与软件工程学院</a></li>
                  <li><a href="#">通信与信息工程学院</a></li>
                  <li><a href="#">电子工程学院</a></li>
@@ -95,15 +91,18 @@
      </ul>
 </div>
 <br/><br/>
- <div class="container">
-    <div class="row">
-        <div class="col-md-3" style="float: left">
+ <div class="container">   <!-- 采用分列设计 分别列出-->
+    <div class="row">   <!-- 高频课程列举-->
+        <a href="#">
+        <div class="col-md-3">
             <div class="thumbnail">
                 <img src="images/13.png" alt="...">
                 <h3>微积分Ⅱ，学科基础课</h3>
                 <p></p>
             </div>
         </div>
+        </a>
+        <a href="#">
         <div class="col-md-3">
             <div class="thumbnail">
                 <img src="images/14.png" alt="...">
@@ -111,6 +110,8 @@
                 <p></p>
             </div>
         </div>
+        </a>
+        <a href="#">
         <div class="col-md-3">
             <div class="thumbnail">
                 <img src="images/15.png" alt="...">
@@ -118,6 +119,8 @@
                 <p></p>
             </div>
         </div>
+        </a>
+        <a href="#">
         <div class="col-md-3">
             <div class="thumbnail">
                 <img src="images/16.png" alt="...">
@@ -125,6 +128,8 @@
                 <p></p>
             </div>
         </div>
+        </a>
+        <a href="#">
         <div class="col-md-3">
             <div class="thumbnail">
                 <img src="images/17.png" alt="...">
@@ -132,6 +137,7 @@
                 <p></p>
             </div>
         </div>
+        </a>
     </div>
     <nav>
         <ul class="pagination">
@@ -151,12 +157,11 @@
     </nav>
  </div>
 <br/>
-    <div class="container"  style="height: 10px">
+    <div class="container"  style="height: 10px">   <!-- 页脚导航-->
         <p class="navbar-text">Copyright &copy; 2015 Syslab 科大基友共和国 All Rights Reversed.</p>
         <p class="navbar-text">详情请点击：<a href="http://www.syslab.us">http://www.syslab..us</a></p>
         <p class="navbar-text">有建议请点击：<a href="contact_us.html">吐槽一下</a></p>
     </div>
-<!--</nav>-->
 
 </body>
 </html>

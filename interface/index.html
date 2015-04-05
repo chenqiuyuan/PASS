@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>挂科难，轻松当学霸</title>
+    <script src="references/jquery-1.11.2.min.js"></script> <!-- 调用的几个现成的库-->
+    <script src="references/app.js"></script>
+    <link href="references/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top"><!-- 导航条设置-->
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html" style="font-size: 25px">挂科难</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav"><!-- 友情跳转链接-->
+                <li><a href="http://www.uestc.edu.cn">电子科技大学</a></li>
+                <li><a href="http://open.163.com/">网易公开课</a></li>
+                <li><a href="http://www.learn.kaikeba.com/">开课吧</a></li>
+                <li><a href="http://www.syslab.us">Syslab</a></li>
+            </ul>
+            <form method="post" action="guakenan/paper_search.php" name="search" class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input name="search" type="text" class="form-control" placeholder="输入搜索内容">
+                    </div>
+                    <button type="submit" value="Search" class="btn btn-success">搜索</button>
+            </form>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                    登录/注册 <!-- 跳转到模态框进行登录-->
+                </button>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container" align="center" style="width: 300px">
+                                    <h3>登录挂科难</h3>
+                                    <h5>如果还没有账号请<a href="register.html">点击注册</a></h5>    <!-- 此部分模态框的内容是登录界面的内容-->
+                                    <form class="input-group input-group-lg" method="post" action="guakenan\judge.php">
+                                        <input type="email" class="form-control" placeholder="Email/Username" name="username" style="width: 300px" required>
+                                        <input type="password" class="form-control" placeholder="Password" name="userpwd" style="width: 300px" required>
+                                        <button type="submit" class="btn btn-info btn-lg" style="width: 300px">确认登录</button>
+                                    </form>
+
+                                    
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </nav>
+    <div class="jumbotron" style="background-image:url('images/main_back.jpg');height: 430px;width: 100%" ><!-- 巨幕设计 挂科难 主题-->
+        <div class="content" style="text-align: center">
+            <br/>
+            <h1 style="color: #ffffff">挂科难，轻松当学霸！</h1>
+            <p style="color: #ffffff">科大基友自己的考试库，带你装X带你飞，每个人都能轻松当学霸！</p>
+            <br/>
+            <p><a class="btn btn-primary btn-lg" href="about_us.html" role="button" style="width: 300px">Learn more &raquo;</a></p>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="nav nav-tabs">  <!-- 筛选导航条-->
+            <li role="presentation"><a href="#">所有科目</a></li>
+            <li role="presentation"><a href="#">核心通识课</a></li>
+            <li role="presentation"><a href="#">专业选修课</a></li>
+            <li role="presentation"><a href="#">文史选修课</a></li>
+            <li role="presentation"><a href="#">公共基础课</a></li>
+            <li class="dropdown" role="presentation">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                    选择学院 <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">  <!-- 学院选择 可根据学院选择课程-->
+                    <li><a href="#">信息与软件工程学院</a></li>
+                    <li><a href="#">通信与信息工程学院</a></li>
+                    <li><a href="#">电子工程学院</a></li>
+                    <li><a href="#">外国语学院</a></li>
+                    <li><a href="#">格拉斯哥学院</a></li>
+                    <li><a href="#">光电信息学院</a></li>
+                    <li><a href="#">微电子与固体电子学院</a></li>
+            <li><a href="#">物理电子学院</a></li>
+            <li><a href="#">自动化工程学研</a></li>
+        </ul>
+            </li>
+        </ul>
+        <br/><br/>
+        <div class="row"><!-- 采用分列设计 分别列出-->
+            <a href="subjects/calculus_1_history.html"> <!-- 高频课程列举-->
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="images/5.png" alt="...">
+                        <h3>微积分Ⅰ，学科基础课</h3>
+                </div>
+            </div>
+            </a>
+            <a href="#">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="images/6.png" alt="...">
+                    <h3>微积分Ⅱ，学科基础课</h3>
+                    <p></p>
+                </div>
+            </div>
+            </a>
+            <a href="#">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="images/7.png" alt="...">
+                    <h3>微积分</h3>
+                    <p></p>
+                </div>
+            </div>
+            </a>
+            <a href="#">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="images/8.png" alt="...">
+                    <h3>微积分</h3>
+                    <p></p>
+                </div>
+            </div>
+            </a>
+            <a href="#">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="images/9.png" alt="...">
+                    <h3>微积分Ⅱ，学科基础课</h3>
+                    <p></p>
+                </div>
+            </div>
+            </a>
+            <a href="#">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="images/10.png" alt="...">
+                    <h3>微积分Ⅱ，学科基础课</h3>
+                    <p></p>
+                </div>
+            </div>
+            </a>
+            <a href="#">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="images/11.png" alt="...">
+                    <h3>微积分Ⅱ，学科基础课</h3>
+                    <p></p>
+                </div>
+            </div>
+            </a>
+            <a href="#">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="images/12.png" alt="...">
+                    <h3>微积分Ⅱ，学科基础课</h3>
+                    <p></p>
+                </div>
+            </div>
+            </a>
+        </div>
+        <nav>
+            <ul class="pagination">  <!-- 分页面跳转 页面1 页面2-->
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="index_2.html">2</a></li>
+                <li>
+                    <a href="index_2.html" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <br/>
+
+    <div class="container"  style="height: 10px"> <!-- 页脚导航-->
+        <p class="navbar-text">Copyright &copy; 2015 Syslab 科大基友共和国 All Rights Reversed.</p>
+        <p class="navbar-text">详情请点击：<a href="http://www.syslab.us">http://www.syslab.us</a></p>
+        <p class="navbar-text">有建议请点击：<a href="contact_us.html">吐槽一下</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>注册挂科难</title>
+    <script src="references/jquery-1.11.2.min.js"></script>  <!-- 调用的几个现成的库-->
+    <script src="references/app.js"></script>
+    <link href="references/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top"> <!-- 导航条设计-->
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html" style="font-size: 25px">挂科难</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">  <!-- 几个友情链接跳转-->
+                <li><a href="http://www.uestc.edu.cn">电子科技大学</a></li>
+                <li><a href="http://open.163.com/">网易公开课</a></li>
+                <li><a href="http://www.learn.kaikeba.com/">开课吧</a></li>
+                <li><a href="http://www.syslab.us">Syslab</a></li>
+            </ul>
+            <div class="navbar-form navbar-right" role="search">
+                <form class="form-group">  <!-- 可进行课程、学院等的搜索 方便查找-->
+                    <input type="text" class="form-control" placeholder="输入搜索内容">
+                </form>
+                <button type="submit" class="btn btn-success">搜索</button>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron" style="background-image:url('images/main_back.jpg');height: 430px;width: 100%" > <!-- 巨幕 突出主题 挂科难 -->
+    <div class="content" style="text-align: center">
+        <h1 style="color: #ffffff">挂科难，轻松当学霸！</h1>
+        <p style="color: #ffffff">科大基友自己的考试库，带你装X带你飞，每个人都能轻松当学霸！</p>
+        <br/>
+        <p><a class="btn btn-primary btn-lg" href="about_us.html" role="button" style="width: 300px">Learn more &raquo;</a></p>
+    </div>
+</div>
+    <div class="container" align="center" style="width: 300px"> <!--注册界面 -->
+        <h3>注册挂科难</h3>
+        <h5>如果已有账号请<a href="login.html">点击登录</a></h5>
+        <form action="guakenan/register_db.php" method="post" class="input-group input-group-lg">
+           <input name="username" type="text" class="form-control" placeholder="Username" required><br/>
+            <input name="userpwd" type="password" class="form-control" placeholder="Password" required>
+            <button type="submit" class="btn btn-success btn-lg" style="width: 300px">确认注册</button>
+        </form>
+    </div>
+<br/><br/>
+<div class="container"  style="height: 10px">  <!--页脚部分 -->
+    <p class="navbar-text">Copyright &copy; 2015 Syslab 科大基友共和国 All Rights Reversed.</p>
+    <p class="navbar-text">详情请点击：<a href="http://www.syslab.us">http://www.syslab.us</a></p>
+    <p class="navbar-text">有建议请点击：<a href="contact_us.html">吐槽一下</a></p>
+</div>
+</body>
+</html>

@@ -6,6 +6,7 @@
     <script src="references/jquery-1.11.2.min.js"></script> <!-- 调用的几个现成的库-->
     <script src="references/app.js"></script>
     <link href="references/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top"><!-- 导航条设置-->
@@ -25,11 +26,15 @@
                         <input name="search" type="text" class="form-control" placeholder="输入搜索内容">
                     </div>
                     <button type="submit" value="Search" class="btn btn-success">搜索</button>
-            </form>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" >
                     登录/注册 <!-- 跳转到模态框进行登录-->
                 </button>
+            </form>
+                <!--<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" >-->
+                    <!--登录/注册 &lt;!&ndash; 跳转到模态框进行登录&ndash;&gt;-->
+                <!--</button>-->
+            <form>
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -41,13 +46,10 @@
                                     <h3>登录挂科难</h3>
                                     <h5>如果还没有账号请<a href="register.html">点击注册</a></h5>    <!-- 此部分模态框的内容是登录界面的内容-->
                                     <form class="input-group input-group-lg" method="post" action="guakenan\judge.php">
-                                        <input type="email" class="form-control" placeholder="Email/Username" name="username" style="width: 300px" required>
+                                        <input type="email" class="form-control" placeholder="Email" name="username" style="width:300px" required>
                                         <input type="password" class="form-control" placeholder="Password" name="userpwd" style="width: 300px" required>
                                         <button type="submit" class="btn btn-info btn-lg" style="width: 300px">确认登录</button>
                                     </form>
-
-                                    
-
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -60,7 +62,7 @@
         </div>
     </div>
     </nav>
-    <div class="jumbotron" style="background-image:url('images/main_back.jpg');height: 430px;width: 100%" ><!-- 巨幕设计 挂科难 主题-->
+    <div class="jumbotron" ><!-- 巨幕设计 挂科难 主题-->
         <div class="content" style="text-align: center">
             <br/>
             <h1 style="color: #ffffff">挂科难，轻松当学霸！</h1>
@@ -95,73 +97,73 @@
         </ul>
         <br/><br/>
         <div class="row"><!-- 采用分列设计 分别列出-->
-            <a href="subjects/calculus_1_history.html"> <!-- 高频课程列举-->
+            <a href="subjects/dsp/dsp_ppts.html"> <!-- 高频课程列举-->
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img src="images/5.png" alt="...">
-                        <h3>微积分Ⅰ，学科基础课</h3>
+                    <img src="images/dsp.png">
+                        <h3 style="color: #000000">专业选修课</h3>
                 </div>
             </div>
             </a>
-            <a href="#">
+            <a href="subjects/calculus_2/calculus_2_history.html">
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img src="images/6.png" alt="...">
-                    <h3>微积分Ⅱ，学科基础课</h3>
+                    <img src="images/wei_ji_fen_2.png">
+                    <h3>学科通识课程</h3>
                     <p></p>
                 </div>
             </div>
             </a>
-            <a href="#">
+            <a href="subjects/physical/physical_ppts.html">
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img src="images/7.png" alt="...">
-                    <h3>微积分</h3>
+                    <img src="images/da_xue_wu_li.png">
+                    <h3>学科通识课程</h3>
                     <p></p>
                 </div>
             </div>
             </a>
-            <a href="#">
+            <a href="subjects/probability/probability_ppts.html">
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img src="images/8.png" alt="...">
-                    <h3>微积分</h3>
+                    <img src="images/gai_lv_lun.png">
+                    <h3>学科通识课程</h3>
                     <p></p>
                 </div>
             </div>
             </a>
-            <a href="#">
+            <a href="subjects/computerComposition/computerComposition_importances.html">
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img src="images/9.png" alt="...">
-                    <h3>微积分Ⅱ，学科基础课</h3>
+                    <img src="images/ji_zu.png">
+                    <h3>学科基础课程</h3>
                     <p></p>
                 </div>
             </div>
             </a>
-            <a href="#">
+            <a href="subjects/digitalLogic/digitalLogic_importabces.html">
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img src="images/10.png" alt="...">
-                    <h3>微积分Ⅱ，学科基础课</h3>
+                    <img src="images/shu_zi_luo_ji.png">
+                    <h3>学科基础课程</h3>
                     <p></p>
                 </div>
             </div>
             </a>
-            <a href="#">
+            <a href="subjects/dataStructure/dataStructure_importances.html">
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img src="images/11.png" alt="...">
-                    <h3>微积分Ⅱ，学科基础课</h3>
+                    <img src="images/shu_ju_jie_gou.png">
+                    <h3>学科基础课程</h3>
                     <p></p>
                 </div>
             </div>
             </a>
-            <a href="#">
+            <a href="subjects/digitalSignal/digitalSignal_ppts.html">
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <img src="images/12.png" alt="...">
-                    <h3>微积分Ⅱ，学科基础课</h3>
+                    <img src="images/shu_zi_xin_hao_chu_li.png">
+                    <h3>数字信号处理</h3>
                     <p></p>
                 </div>
             </div>
@@ -185,7 +187,6 @@
         </nav>
     </div>
     <br/>
-
     <div class="container"  style="height: 10px"> <!-- 页脚导航-->
         <p class="navbar-text">Copyright &copy; 2015 Syslab 科大基友共和国 All Rights Reversed.</p>
         <p class="navbar-text">详情请点击：<a href="http://www.syslab.us">http://www.syslab.us</a></p>

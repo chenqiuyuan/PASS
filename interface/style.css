@@ -1,0 +1,12 @@
+.thumbnail{
+    color: #000000;
+    text-align: center;
+}
+.thumbnail img{
+    height: 155px;
+}
+.jumbotron{
+     background-image:url('images/main_back.jpg');
+     height: 430px;
+     width: 100%;
+ }

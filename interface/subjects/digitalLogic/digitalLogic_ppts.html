@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数字逻辑老师课件</title>
+    <script src="../../references/jquery-1.11.2.min.js"></script> <!-- 调用的几个现成的库-->
+    <script src="../../references/app.js"></script>
+    <link href="../../references/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top"><!-- 导航条设置-->
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../../index.html" style="font-size: 25px">挂科难</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav"><!-- 友情跳转链接-->
+                <li><a href="http://www.uestc.edu.cn">电子科技大学</a></li>
+                <li><a href="http://open.163.com/">网易公开课</a></li>
+                <li><a href="http://www.learn.kaikeba.com/">开课吧</a></li>
+                <li><a href="http://www.syslab.us">Syslab</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="输入搜索内容">
+                </div>
+                <button type="submit" class="btn btn-success">搜索</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                    登录/注册 <!-- 跳转到模态框进行登录-->
+                </button>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container" align="center" style="width: 300px">
+                                    <h3>登录挂科难</h3>
+                                    <h5>如果还没有账号请<a href="../../register.html">点击注册</a></h5>    <!-- 此部分模态框的内容是登录界面的内容-->
+                                    <form class="input-group input-group-lg" method="post" action="#">
+                                        <input type="email" class="form-control" placeholder="Email" name="email" style="width: 300px" required>
+                                        <input type="password" class="form-control" placeholder="Password" name="email" style="width: 300px" required>
+                                        <button type="submit" class="btn btn-info btn-lg" style="width: 300px">确认登录</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+<br/><br/><br/>
+<div class="container">  <!-- 科目主要页面-->
+    <div class="col-md-3">  <!--左侧导航栏 可选择 -->
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-info">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            历年真题
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="list-group">      <!-- 科目列表-->
+                        <ul class="nav nav-sidebar">
+                            <li><a href="../../subjects/dsp/dsp_history.html">DSP</a></li>
+                            <li><a href="../../subjects/calculus_2/calculus_2_history.html">微积分Ⅱ</a></li>
+                            <li><a href="../../subjects/physical/physical_history.html">大学物理</a></li>
+                            <li><a href="../../subjects/probability/probability_history.html">概率论</a></li>
+                            <li><a href="../../subjects/computerComposition/computerComposition_history.html">计算机组成原理</a></li>
+                            <li><a href="../../subjects/digitalLogic/digitalLogic_history.html">数字逻辑</a></li>
+                            <li><a href="../../subjects/dataStructure/dataStructure_history.html">数据结构与算法</a></li>
+                            <li><a href="../../subjects/digitalSignal/digitalSignal_history.html">数字信号处理</a></li>
+                            <li><a href="../../subjects/embed/embed_history.html">嵌入式系统导论</a></li>
+                            <li><a href="../../subjects/mathExperiment/mathExperiment_history.html">数学实验</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            老师课件
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="list-group">
+                        <ul class="nav nav-sidebar">
+                            <li><a href="../../subjects/dsp/dsp_ppts.html">DSP</a></li>
+                            <li><a href="../../subjects/calculus_2/calculus_2_ppts.html">微积分Ⅱ</a></li>
+                            <li><a href="../../subjects/physical/physical_ppts.html">大学物理</a></li>
+                            <li><a href="../../subjects/probability/probability_ppts.html">概率论</a></li>
+                            <li><a href="../../subjects/computerComposition/computerComposition_ppts.html">计算机组成原理</a></li>
+                            <li style="background-color: #cccccc"><a href="../../subjects/digitalLogic/digitalLogic_ppts.html">数字逻辑</a></li>
+                            <li><a href="../../subjects/dataStructure/dataStructure_ppts.html">数据结构与算法</a></li>
+                            <li><a href="../../subjects/digitalSignal/digitalSignal_ppts.html">数字信号处理</a></li>
+                            <li><a href="../../subjects/embed/embed_ppts.html">嵌入式系统导论</a></li>
+                            <li><a href="../../subjects/mathExperiment/mathExperiment_ppts.html">数学实验</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            考试重点
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="list-group">
+                        <ul class="nav nav-sidebar">
+                            <li><a href="../../subjects/dsp/dsp_importance.html">DSP</a></li>
+                            <li><a href="../../subjects/calculus_2/calculus_2_importances.html">微积分Ⅱ</a></li>
+                            <li><a href="../../subjects/physical/physical_importances.html">大学物理</a></li>
+                            <li><a href="../../subjects/probability/probability_importances.html">概率论</a></li>
+                            <li><a href="../../subjects/computerComposition/computerComposition_importances.html">计算机组成原理</a></li>
+                            <li><a href="../../subjects/digitalLogic/digitalLogic_importabces.html">数字逻辑</a></li>
+                            <li><a href="../../subjects/dataStructure/dataStructure_importances.html">数据结构与算法</a></li>
+                            <li><a href="../../subjects/digitalSignal/digitalSignal_importances.html">数字信号处理</a></li>
+                            <li><a href="../../subjects/embed/embed_importances.html">嵌入式系统导论</a></li>
+                            <li><a href="../../subjects/mathExperiment/mathExperiment_importances.html">数学实验</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-8">
+        <h1 style="color: #449d44">微积分Ⅱ数字逻辑老师课件</h1>  <!--科目详细内容 -->
+        <table class="table table-hover">
+            <tr class="warning">
+                <td style="vertical-align: middle">第一章 数制与码制</td>
+                <td>
+                    <a href="../../meterials/digitalLogic/第一章2014.ppt"> <button type="button" class="btn btn-default">下载</button> </a>
+                </td>
+            </tr>
+            <tr class="info">
+                <td style="vertical-align: middle">第二章 逻辑代数基础</td>
+                <td>
+                    <a href="../../meterials/digitalLogic/第二章2014.ppt"> <button type="button" class="btn btn-default">下载</button> </a>
+                </td>
+            </tr>
+            <tr class="warning">
+                <td style="vertical-align: middle">第四章 组合逻辑电路</td>
+                <td>
+                    <a href="../../meterials/digitalLogic/第四章2014.ppt"> <button type="button" class="btn btn-default">下载</button> </a>
+                </td>
+            </tr>
+            <tr class="info">
+                <td style="vertical-align: middle">第五章 触发器</td>
+                <td>
+                    <a href="../../meterials/digitalLogic/第五章2014.ppt"> <button type="button" class="btn btn-default">下载</button> </a>
+                </td>
+            </tr>
+            <tr class="warning">
+                <td style="vertical-align: middle">第六章 同步时序电路</td>
+                <td>
+                    <a href="../../meterials/digitalLogic/第六章2014.ppt"> <button type="button" class="btn btn-default">下载</button> </a>
+                </td>
+            </tr>
+            <tr class="info">
+                <td style="vertical-align: middle">第八章 可编程逻辑电路</td>
+                <td>
+                    <a href="../../meterials/digitalLogic/第八章2014.ppt"> <button type="button" class="btn btn-default">下载</button> </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<br/><br/><br/>
+<div class="container"  style="height: 10px"> <!-- 页脚导航-->
+    <p class="navbar-text">Copyright &copy; 2015 Syslab 科大基友共和国 All Rights Reversed.</p>
+    <p class="navbar-text">详情请点击：<a href="http://www.syslab.us">http://www.syslab.us</a></p>
+    <p class="navbar-text">有建议请点击：<a href="../../contact_us.html">吐槽一下</a></p>
+</div>
+</body>
+</html>l>
